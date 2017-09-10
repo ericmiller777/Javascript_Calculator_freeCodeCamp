@@ -38,7 +38,6 @@
         margin-bottom: 5%;
         font-size: 2.777vh;
         font-family: Orbitron, sans-serif;
-        direction: rtl;
     }
     #buttons{
         text-align: center;
@@ -61,7 +60,8 @@
 <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6 col-centered">
 <div id="calculatorDiv" class="calculatorBody">
 <div>
-<input id="textBox" type="text" maxlength="10">
+<form id="test" Name="Calc">
+<input id="textBox" type="text" name="Input" maxlength="10" disabled = "disabled">
 </div>
 <div id="buttons" class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -90,57 +90,99 @@
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 5%;">
 <button id="0" class="btn btn-primary">0</button>
-<button id="." class="btn btn-primary">.</button>
+<button id="dot" class="btn btn-primary">.</button>
 <button id="equal" class="btn btn-primary">=</button>
 <button id="addition" class="btn btn-primary">+</button>
 </div>
 </div>
+</form>
 </div>
 </div>
 </div>
 </div>
 <script>
+var numbers = "";
+var numArray = [];
+
 $("#pi").on("click", function () {
+    Calc.Input.value = Calc.Input.value * 3.14159265359;
+    return false;
 });
 $("#negative").on("click", function () {
+    Calc.Input.value = Calc.Input.value * -1; 
+    return false;
 });
 $("#square_root").on("click", function () {
+    Calc.Input.value = Math.sqrt(Calc.Input.value);
+    return false;
 });
 $("#C").on("click", function () {
+    Calc.display.value='';
+    return false;
 });
 $("#7").on("click", function () {
-    $("#textBox").text("7");
-    console.log("you suck");
+    Calc.Input.value +="7";
+    return false;
 });
 $("#8").on("click", function () {
+    Calc.Input.value +="8";
+    return false;
 });
 $("#9").on("click", function () {
+    Calc.Input.value +="9";
+    return false;
 });
 $("#divide").on("click", function () {
 });
 $("#4").on("click", function () {
+    Calc.Input.value +="4";
+    return false;
 });
 $("#5").on("click", function () {
+    Calc.Input.value +="5";
+    return false;
 });
 $("#6").on("click", function () {
+    Calc.Input.value +="6";
+    return false;
 });
 $("#multiply").on("click", function () {
+    Calc.Input.value +=" * ";
+    return false;
 });
 $("#1").on("click", function () {
+    Calc.Input.value +="1";
+    return false;
 });
 $("#2").on("click", function () {
+    Calc.Input.value +="2";
+    return false;
 });
 $("#3").on("click", function () {
+    Calc.Input.value +="3";
+    return false;
 });
 $("#subtract").on("click", function () {
+    Calc.Input.value +=" - ";
+    return false;
 });
 $("#0").on("click", function () {
+    Calc.Input.value +="0";
+    return false;
 });
-$("#.").on("click", function () {
+$("#dot").on("click", function () {
+    Calc.Input.value +=".";
+    return false;
 });
 $("#equal").on("click", function () {
+    value = " = ";
+    Calc.Input.value = eval(Calc.Input.value)
+    return false;
 });
 $("#addition").on("click", function () {
+    value="  +  "
+    Calc.Input.value += " + ";
+    return false;
 });
 
 var viewportWidth = $(window).width();
