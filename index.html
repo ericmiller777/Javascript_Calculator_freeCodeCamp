@@ -65,34 +65,34 @@
 </div>
 <div id="buttons" class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<button class="btn btn-primary">&#928;</button>
-<button class="btn btn-primary">(-)</button>
-<button class="btn btn-primary">&#x221A;</button>
-<button class="btn btn-primary">C</button>
+<button id="pi" class="btn btn-primary">&#928;</button>
+<button id="negative" class="btn btn-primary">(-)</button>
+<button id="square_root" class="btn btn-primary">&#x221A;</button>
+<button id="C" class="btn btn-primary">C</button>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<button class="btn btn-primary">7</button>
-<button class="btn btn-primary">8</button>
-<button class="btn btn-primary">9</button>
-<button class="btn btn-primary">&#xf7;</button>
+<button id="7" class="btn btn-primary">7</button>
+<button id="8" class="btn btn-primary">8</button>
+<button id="9" class="btn btn-primary">9</button>
+<button id="divide" class="btn btn-primary">&#xf7;</button>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<button class="btn btn-primary">4</button>
-<button class="btn btn-primary">5</button>
-<button class="btn btn-primary">6</button>
-<button class="btn btn-primary">x</button>
+<button id="4" class="btn btn-primary">4</button>
+<button id="5" class="btn btn-primary">5</button>
+<button id="6" class="btn btn-primary">6</button>
+<button id="multiply" class="btn btn-primary">x</button>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<button class="btn btn-primary">1</button>
-<button class="btn btn-primary">2</button>
-<button class="btn btn-primary">3</button>
-<button class="btn btn-primary">-</button>
+<button id="1" class="btn btn-primary">1</button>
+<button id="2" class="btn btn-primary">2</button>
+<button id="3" class="btn btn-primary">3</button>
+<button id="subtract" class="btn btn-primary">-</button>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 5%;">
-<button class="btn btn-primary">0</button>
-<button class="btn btn-primary">.</button>
-<button class="btn btn-primary">=</button>
-<button class="btn btn-primary">+</button>
+<button id="0" class="btn btn-primary">0</button>
+<button id="." class="btn btn-primary">.</button>
+<button id="equal" class="btn btn-primary">=</button>
+<button id="addition" class="btn btn-primary">+</button>
 </div>
 </div>
 </div>
@@ -100,6 +100,48 @@
 </div>
 </div>
 <script>
+$("#pi").on("click", function () {
+});
+$("#negative").on("click", function () {
+});
+$("#square_root").on("click", function () {
+});
+$("#C").on("click", function () {
+});
+$("#7").on("click", function () {
+    $("textBox").html("it worked");
+});
+$("#8").on("click", function () {
+});
+$("#9").on("click", function () {
+});
+$("#divide").on("click", function () {
+});
+$("#4").on("click", function () {
+});
+$("#5").on("click", function () {
+});
+$("#6").on("click", function () {
+});
+$("#multiply").on("click", function () {
+});
+$("#1").on("click", function () {
+});
+$("#2").on("click", function () {
+});
+$("#3").on("click", function () {
+});
+$("#subtract").on("click", function () {
+});
+$("#0").on("click", function () {
+});
+$("#.").on("click", function () {
+});
+$("#equal").on("click", function () {
+});
+$("#addition").on("click", function () {
+});
+
 var viewportWidth = $(window).width();
 var viewportHeight = $(window).height();
 jQuery.fn.center = function () {
